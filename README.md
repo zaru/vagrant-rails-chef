@@ -1,4 +1,40 @@
-vagrant-rails-chef
+VagrantでのRails開発環境構築
 ==================
 
-Rails development environment setup in Vagrant
+Within a virtual environment using the Vagrant, is building a repository environment to develop Ruby on Rails.
+
+## Usage
+
+```
+$ git clone git@github.com:zaru/vagrant-rails-chef.git
+$ cd vagrant-rails-chef
+$ bundle install --path vendor/bundler
+$ bundle exec berks vendor cookbooks
+$ vagrant up
+```
+
+```
+$ vagrant ssh
+```
+
+```
+$ cd /vagrant
+$ mkdir rails
+$ cd rails
+$ bundle init
+$ vi Gemfile
+```
+
+```                                                                                
+source "https://rubygems.org"
+
+gem "rails"
+```
+
+```
+$ bundle install --path vendor/bundle
+$ bundle exec rails new sample --skip-bundle
+$ cd sample
+$ bundle install --path vendor/bundle
+$ bundle exec rails s
+```
