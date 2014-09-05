@@ -38,3 +38,7 @@ $ cd sample
 $ bundle install --path vendor/bundle
 $ bundle exec rails s
 ```
+
+## MySQL
+
+- mysql-pkg/recipes/default.rb
