@@ -43,6 +43,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         }
       }
     }
+    chef.add_recipe 'redisio'
+    chef.add_recipe 'redisio::enable'
     #chef.run_list = [
 	#]
   end
