@@ -2,3 +2,10 @@
 .bundle
 .DS_Store
 
+cookbooks/
+vendor/
+
+# templateのため除外してますが、
+# プロジェクトで使用する際には必ずバージョン管理に含んでください
+Berksfile.lock
+Gemfile.lock

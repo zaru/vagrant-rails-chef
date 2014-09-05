@@ -1,6 +1,7 @@
 source 'https://api.berkshelf.com'
  
 cookbook 'yum-pkg', path: 'yum-pkg'
+cookbook 'mysql-pkg', path: 'mysql-pkg'
 
 cookbook 'git'
 cookbook 'build-essential'
@@ -12,3 +13,5 @@ cookbook 'rbenv', :git => 'git://github.com/fnichol/chef-rbenv.git', :branch => 
 cookbook 'ruby_build', '~> 0.8.0'
 cookbook 'mongodb', '~> 0.16.1'
 cookbook 'nodejs'
+cookbook 'mysql', '~> 5.5.1'
+cookbook 'database', '~> 2.3.0'

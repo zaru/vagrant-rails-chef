@@ -17,10 +17,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.omnibus.chef_version = :latest
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = "./cookbooks"
-    chef.run_list = [
-      'recipe[yum-pkg]'
-    ]
+    chef.add_recipe 'mysql::client'
+    chef.add_recipe 'mysql::server'
+    chef.add_recipe 'mysql-pkg'
+    chef.add_recipe 'database'
     chef.add_recipe 'yum'
+    chef.add_recipe 'yum-pkg'
     chef.add_recipe 'build-essential'
     chef.add_recipe 'ruby_build'
     chef.add_recipe 'rbenv::system'
@@ -41,6 +43,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         }
       }
     }
+    #chef.run_list = [
+	#]
   end
 
 end
