@@ -23,15 +23,7 @@ end
 mysql_database_user "admin" do
     connection mysql_connection_info
     password "passw0rd"
-    database_name "my_app"
     privileges [:all]
     action [:create, :grant]
 end
 
-mysql_database_user "app" do
-    connection mysql_connection_info
-    password "passw0rd"
-    database_name "my_app"
-    privileges [:select, :update, :insert, :delete]
-    action [:create, :grant]
-end
