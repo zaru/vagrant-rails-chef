@@ -32,8 +32,11 @@ gem "rails"
 ```
 
 ```
+# Nokogiriでコケる場合
+$ bundle config build.nokogiri --use-system-libraries
+
 $ bundle install --path vendor/bundle
-$ bundle exec rails new sample --skip-bundle
+$ bundle exec rails new sample -d mysql --skip-bundle
 $ cd sample
 $ bundle install --path vendor/bundle
 $ bundle exec rails s
